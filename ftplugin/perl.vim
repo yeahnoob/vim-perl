@@ -87,3 +87,8 @@ let b:match_words = '\<if\>:\<elsif\>:\<else\>'
 " Restore the saved compatibility options.
 let &cpo = s:save_cpo
 unlet s:save_cpo
+
+
+" Tidy selected lines (or entire file) with _t:
+nnoremap <silent> _t :%!perltidy -q<Enter>
+vnoremap <silent> _t :!perltidy -q<Enter>
